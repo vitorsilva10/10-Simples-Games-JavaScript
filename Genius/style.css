@@ -1,5 +1,5 @@
 body {
-
+    box-sizing: border-box;
     background-color: rgb(234, 237, 240);
     font-family: 'Press Start 2P', cursive;
 }
@@ -23,6 +23,8 @@ html {
 
     --color-border: #333333;
 
+    --color-background--painel: #ECE7EE;
+
 
 
 }
@@ -44,12 +46,12 @@ html {
     display: grid;
     grid-template-areas: 'verde vermelho'
         'amarelo azul';
-    grid-gap: 2rem;
+    grid-gap: 3.5rem;
     background-color: var(--color-border);
     border: 1rem solid var(--color-border);
     border-radius: 100%;
-    width: 50rem;
-    height: 50rem;
+    width: 48rem;
+    height: 48rem;
     padding: 1.5rem;
 
 
@@ -57,23 +59,23 @@ html {
 
 .blue {
     background-color: var(--color-normal-blue);
-    border-top-left-radius: 100%;
+    border-top-left-radius: 25rem;
 }
 
 
 .yellow {
     background-color: var(--color-normal-yellow);
-    border-top-right-radius: 100%;
+    border-top-right-radius: 25rem;
 }
 
 .red {
     background-color: var(--color-normal-red);
-    border-bottom-left-radius: 100%;
+    border-bottom-left-radius: 25rem;
 }
 
 .green {
     background-color: var(--color-normal-green);
-    border-bottom-right-radius: 100%;
+    border-bottom-right-radius: 25rem;
 }
 
 
@@ -98,7 +100,7 @@ html {
 
 .starting {
     position: absolute;
-    background-color: #ECE7EE;
+    background-color: var(--color-background--painel);
     border-radius: 100%;
     width: 20rem;
     height: 20rem;
@@ -108,14 +110,62 @@ html {
 
 .start__name{
     font-size: 2.2rem;
-    text-align: center;
+    margin: 0.8rem auto;
     padding: 1.5rem;
+    text-transform: uppercase;
 }
+
+
+.starting{
+   
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  
+}
+
+.group{
+    margin-top: .3rem;
+}
+
+.group-large{
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+}
+
+
+.gui__btn {
+   
+    padding: .9rem;
+    border: .3rem solid var(--color-border);
+    cursor: pointer;
+    box-shadow: .2rem .3rem #222;
+    font-weight: bold;
+}
+
+.gui__btn:active{
+    transform: translate(0,.3rem);
+    box-shadow: none;
+}
+
+
+.gui__btn--start{
+    background-color:var(--color-light-yellow);
+    color: var(--color-border);
+}
+
+
+.gui__btn--strict{
+    background-color:var(--color-light-red);
+    color: var(--color-border);
+}
+
 
 
 @media only screen and (max-width: 708px) {
     .game {
-
         width: 35rem;
         height: 35rem
     }
