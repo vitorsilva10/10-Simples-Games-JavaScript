@@ -1,0 +1,122 @@
+body {
+
+    background-color: rgb(234, 237, 240);
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-normal-green: #00A74A;
+    --color-normal-red: #9F0F17;
+    --color-normal-yellow: #CCA707;
+    --color-normal-blue: #094A8F;
+
+
+    --color-light-green: #13ff7c;
+    --color-light-red: #ff4c4c;
+    --color-light-yellow: #fed93f;
+    --color-light-blue: #1c8cff;
+
+    --color-border: #333333;
+
+
+
+}
+
+
+
+.container {
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10rem;
+
+
+}
+
+
+.game {
+    display: grid;
+    grid-template-areas: 'verde vermelho'
+        'amarelo azul';
+    grid-gap: 2rem;
+    background-color: var(--color-border);
+    border: 1rem solid var(--color-border);
+    border-radius: 100%;
+    width: 50rem;
+    height: 50rem;
+    padding: 1.5rem;
+
+
+}
+
+.blue {
+    background-color: var(--color-normal-blue);
+    border-top-left-radius: 100%;
+}
+
+
+.yellow {
+    background-color: var(--color-normal-yellow);
+    border-top-right-radius: 100%;
+}
+
+.red {
+    background-color: var(--color-normal-red);
+    border-bottom-left-radius: 100%;
+}
+
+.green {
+    background-color: var(--color-normal-green);
+    border-bottom-right-radius: 100%;
+}
+
+
+.blue.game__pad--active {
+
+    background-color: var(--color-light-blue);
+}
+
+.yellow.game__pad--active {
+    background-color: var(--color-light-yellow);
+}
+
+.red.game__pad--active {
+    background-color: var(--color-light-red);
+}
+
+.green.game__pad--active {
+
+    background-color: var(--color-light-green);
+
+}
+
+.starting {
+    position: absolute;
+    background-color: #ECE7EE;
+    border-radius: 100%;
+    width: 20rem;
+    height: 20rem;
+    border: 1.5rem solid var(--color-border);
+}
+
+
+.start__name{
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+
+@media only screen and (max-width: 708px) {
+    .game {
+
+        width: 35rem;
+        height: 35rem
+    }
+}
