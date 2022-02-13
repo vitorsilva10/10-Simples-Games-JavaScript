@@ -24,7 +24,10 @@ html {
     --color-border: #333333;
 
     --color-background--painel: #ECE7EE;
-
+    
+    --color-counter-bg:#32050C;
+    --clr-counter-off:	  #430710;
+	--clr-counter-on:	  #DC0D29;
 
 
 }
@@ -102,14 +105,15 @@ html {
     position: absolute;
     background-color: var(--color-background--painel);
     border-radius: 100%;
-    width: 20rem;
-    height: 20rem;
+    width: 22rem;
+    height: 22rem;
     border: 1.5rem solid var(--color-border);
 }
 
 
 .start__name{
     font-size: 2.2rem;
+    font-weight: bold;
     margin: 0.8rem auto;
     padding: 1.5rem;
     text-transform: uppercase;
@@ -122,10 +126,24 @@ html {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+   
   
 }
 
+.gui__label{
+    font-family: 'Arima Madurai', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-border);
+    margin-top: .1rem;
+
+}
+
 .group{
+    display: flex;
+    flex-direction: column;
     margin-top: .3rem;
 }
 
@@ -143,6 +161,8 @@ html {
     cursor: pointer;
     box-shadow: .2rem .3rem #222;
     font-weight: bold;
+    position: relative;
+    bottom: .9rem;
 }
 
 .gui__btn:active{
@@ -162,6 +182,23 @@ html {
     color: var(--color-border);
 }
 
+
+.gui__counter{
+
+    background-color: var(--color-counter-bg);
+    color: var(--clr-counter-on);
+    width: 6rem;
+    height: 5rem;
+    font-family: 'Iceland', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: right;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 1rem;
+}
 
 
 @media only screen and (max-width: 708px) {
